@@ -1,0 +1,6 @@
+# Self-registration row: add this package to your profile's
+# dsh.profile.bundles (or paste this row into the profile's
+# cordis.patch.yml) to make it a loader entry.
+- insert:
+    - id: dsh-collapse-history
+      name: 'dsh-collapse-history'
