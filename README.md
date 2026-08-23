@@ -12,7 +12,7 @@ A zero-build, dependency-free **client plugin** for [DeepSeek Harness](https://g
 
 | Feature | Description |
 | --- | --- |
-| ⚡ **Auto fold (default ON)** | Older turns fold automatically; the most recent \`N\` assistant replies and \`N\` user messages stay expanded. |
+| ⚡ **Auto fold (default ON)** | Older **assistant replies** fold automatically; the most recent \`N\` stay expanded (set \`0\` to fold every assistant reply). **Your messages are never auto-folded**, so browsing history stays natural. |
 | 🧑‍💻 **Hide all assistant replies** | Every assistant turn (thinking, text, tool calls) collapses into a chip — **you see only your own questions**. |
 | 👤 **Hide all your messages** | The reverse view: only the assistant's replies remain. |
 | 🖱 **One-click expand** | Click any chip to expand that turn. Manually toggled turns are *pinned* — auto mode never undoes your choice. |
@@ -26,7 +26,7 @@ A zero-build, dependency-free **client plugin** for [DeepSeek Harness](https://g
 
 ![demo](docs/demo.gif)
 
-*Auto fold → hide all assistant replies → show all → hide all user messages → show all.*
+*Auto fold (assistant-only) → hide all assistant replies → show all → hide all user messages → show all.*
 
 ## 📸 Screenshots
 
@@ -97,8 +97,7 @@ Stored in \`localStorage\` (\`dsh-collapse-history:settings:v2\`), editable from
 | Key | Default | Range | Meaning |
 | --- | --- | --- | --- |
 | \`auto\` | \`true\` | bool | Master switch for auto folding |
-| \`assistantKeep\` | \`2\` | 0–10 | How many **most recent assistant replies** stay expanded |
-| \`userKeep\` | \`2\` | 0–10 | How many **most recent user messages** stay expanded |
+| \`assistantKeep\` | \`1\` | 0–10 | How many **most recent assistant replies** stay expanded (\`0\` = fold every assistant reply) |
 
 ## 🛠 How it works
 
