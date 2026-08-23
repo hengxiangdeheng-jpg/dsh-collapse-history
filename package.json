@@ -1,6 +1,6 @@
 {
   "name": "dsh-collapse-history",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "DSH web client plugin: auto & selective folding of conversation turns — hide all assistant replies to see only your messages (or vice versa); the most recent N turns stay expanded.",
   "type": "module",
   "main": "lib/index.js",

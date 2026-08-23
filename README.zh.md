@@ -15,7 +15,8 @@
 | ⚡ **自动折叠（默认开启）** | 只自动折叠较旧的**助手回复**，最近 N 条保持展开（设为 0 可全部折叠）；**你的消息永远不会被自动折叠**，浏览历史不打断。 |
 | 🧑‍💻 **隐藏全部助手回复** | 每条助手轮次（思考、正文、工具调用）整段收成胶囊——**界面只剩你的问题**。 |
 | 👤 **隐藏全部你的消息** | 反过来：只保留助手的回复。 |
-| 🖱 **点击即展开** | 点任意胶囊即可展开该轮；手动操作过的轮次会被「固定」，自动模式不会覆盖。 |
+| 📄 **超长内容折叠** | 单条消息超过设定字数（默认 800 字）自动收成胶囊；悬停还有手动折叠小按钮。 |
+| 🖱 **点击即展开** | 点任意胶囊即可展开该轮/该段；手动操作过的轮次会被「固定」，自动模式不会覆盖。 |
 | 🎛 **设置面板** | 分别设置助手/你的消息保留条数 N、自动开关、清除固定、恢复默认。 |
 | 💾 **设置持久化** | 保存在 `localStorage`，刷新不丢。 |
 | 🌗 **原生外观** | 使用应用自带设计令牌（`--dsw-alias-*`），亮/暗主题自适应。 |
@@ -34,9 +35,13 @@
 | --- | --- |
 | ![auto](docs/screenshot-auto.png) | ![assistant hidden](docs/screenshot-assistant-hidden.png) |
 
-| 只留助手回复（隐藏你的消息） | 设置面板 |
+| 只留助手回复（隐藏你的消息） | 超长内容自动折叠 |
 | --- | --- |
-| ![user hidden](docs/screenshot-user-hidden.png) | ![settings](docs/screenshot-settings.png) |
+| ![user hidden](docs/screenshot-user-hidden.png) | ![content fold](docs/screenshot-content-fold.png) |
+
+| 设置面板 |
+| --- |
+| ![settings](docs/screenshot-settings.png) |
 
 ## 📦 安装
 

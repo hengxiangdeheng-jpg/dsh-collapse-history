@@ -15,7 +15,8 @@ A zero-build, dependency-free **client plugin** for [DeepSeek Harness](https://g
 | ⚡ **Auto fold (default ON)** | Older **assistant replies** fold automatically; the most recent \`N\` stay expanded (set \`0\` to fold every assistant reply). **Your messages are never auto-folded**, so browsing history stays natural. |
 | 🧑‍💻 **Hide all assistant replies** | Every assistant turn (thinking, text, tool calls) collapses into a chip — **you see only your own questions**. |
 | 👤 **Hide all your messages** | The reverse view: only the assistant's replies remain. |
-| 🖱 **One-click expand** | Click any chip to expand that turn. Manually toggled turns are *pinned* — auto mode never undoes your choice. |
+| 📄 **Fold long content** | Any single message longer than the threshold (default 800 chars) folds into a chip automatically — with a hover fold button for manual folding. |
+| 🖱 **One-click expand** | Click any chip to expand that turn or block. Manually toggled turns are *pinned* — auto mode never undoes your choice. |
 | 🎛 **Settings popover** | Tune \`keep-recent N\` for assistant replies and user messages, toggle auto mode, clear pins, reset defaults. |
 | 💾 **Persistent** | Settings are saved to \`localStorage\` and survive page reloads. |
 | 🌗 **Native look** | Styled with the app's own design tokens (\`--dsw-alias-*\`), light & dark themes. |
@@ -34,9 +35,13 @@ A zero-build, dependency-free **client plugin** for [DeepSeek Harness](https://g
 | --- | --- |
 | ![auto](docs/screenshot-auto.png) | ![assistant hidden](docs/screenshot-assistant-hidden.png) |
 
-| Only assistant replies (your messages hidden) | Settings |
+| Only assistant replies (your messages hidden) | Long content auto-folded |
 | --- | --- |
-| ![user hidden](docs/screenshot-user-hidden.png) | ![settings](docs/screenshot-settings.png) |
+| ![user hidden](docs/screenshot-user-hidden.png) | ![content fold](docs/screenshot-content-fold.png) |
+
+| Settings |
+| --- |
+| ![settings](docs/screenshot-settings.png) |
 
 ## 📦 Install
 
@@ -98,6 +103,7 @@ Stored in \`localStorage\` (\`dsh-collapse-history:settings:v2\`), editable from
 | --- | --- | --- | --- |
 | \`auto\` | \`true\` | bool | Master switch for auto folding |
 | \`assistantKeep\` | \`1\` | 0–10 | How many **most recent assistant replies** stay expanded (\`0\` = fold every assistant reply) |
+| \`maxChars\` | \`800\` | 0–100000 | Fold any single message longer than this many characters (\`0\` = never fold by length) |
 
 ## 🛠 How it works
 
